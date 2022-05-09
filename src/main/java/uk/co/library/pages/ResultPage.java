@@ -18,7 +18,7 @@ public class ResultPage extends Utility {
     WebElement resultText;
 
     public Boolean verifyTheResults(String expected) {
-        Reporter.log("Verifying Results : "+expected+ " from " + resultText.toString());
+        Reporter.log("Verifying Results : " + expected + " from " + resultText.toString());
         Boolean result = false;
         String s = getTextFromElement(resultText);
         if (s.contains(expected)) {

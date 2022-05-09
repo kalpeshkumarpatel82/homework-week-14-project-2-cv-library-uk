@@ -45,55 +45,53 @@ public class HomePage extends Utility {
     @FindBy(xpath = "//*[contains(text(),'Accept')]")
     WebElement acceptCookies;
 
-
-
-
-    public void clickOnAcceptCookie(){
+    public void clickOnAcceptCookie() {
         Reporter.log("Clicking on Accept Cookies : " + acceptCookies.toString());
         switchToiFrame("gdpr-consent-notice");
         clickOnElement(acceptCookies);
     }
-    public void enterJobTitle(String jobTitle){
-        Reporter.log("Sending keywords : "+jobTitle+" to " + keyWords.toString());
-        sendTextToElement(keyWords,jobTitle);
+
+    public void enterJobTitle(String jobTitle) {
+        Reporter.log("Sending keywords : " + jobTitle + " to " + keyWords.toString());
+        sendTextToElement(keyWords, jobTitle);
     }
 
-    public void enterLocation(String location){
-        Reporter.log("Sending Location : "+location+" to " + locations.toString());
-        sendTextToElement(locations,location);
+    public void enterLocation(String location) {
+        Reporter.log("Sending Location : " + location + " to " + locations.toString());
+        sendTextToElement(locations, location);
     }
 
-    public void selectDistance(String distance){
-        Reporter.log("Selecting distance : "+distance+ " from " + distances.toString());
-        selectByValueFromDropDown(distances,distance);
+    public void selectDistance(String distance) {
+        Reporter.log("Selecting distance : " + distance + " from " + distances.toString());
+        selectByValueFromDropDown(distances, distance);
     }
 
-    public void clickOnMoreSearchOptionLink(){
+    public void clickOnMoreSearchOptionLink() {
         Reporter.log("Clicking on More options : " + toggleMoreOptions.toString());
         clickOnElement(toggleMoreOptions);
     }
 
-    public void enterMinSalary(String minSalary){
-        Reporter.log("Sending Min Salary : "+ minSalary+ " to " + salaryMin.toString());
-        sendTextToElement(salaryMin,minSalary);
+    public void enterMinSalary(String minSalary) {
+        Reporter.log("Sending Min Salary : " + minSalary + " to " + salaryMin.toString());
+        sendTextToElement(salaryMin, minSalary);
     }
 
-    public void enterMaxSalary(String maxSalary){
-        Reporter.log("Sending Max Salary : "+maxSalary +" to " + salaryMax.toString());
-        sendTextToElement(salaryMax,maxSalary);
+    public void enterMaxSalary(String maxSalary) {
+        Reporter.log("Sending Max Salary : " + maxSalary + " to " + salaryMax.toString());
+        sendTextToElement(salaryMax, maxSalary);
     }
 
-    public void selectSalaryType(String sType){
-        Reporter.log("Selecting Salary Types : "+ sType+ " from " + salaryType.toString());
-        selectByValueFromDropDown(salaryType,sType);
+    public void selectSalaryType(String sType) {
+        Reporter.log("Selecting Salary Types : " + sType + " from " + salaryType.toString());
+        selectByValueFromDropDown(salaryType, sType);
     }
 
-    public void selectJobType(String jobType){
-        Reporter.log("Selecting Job Types : "+jobType+ " to " + typeOfJob.toString());
-        selectByValueFromDropDown(typeOfJob,jobType);
+    public void selectJobType(String jobType) {
+        Reporter.log("Selecting Job Types : " + jobType + " to " + typeOfJob.toString());
+        selectByValueFromDropDown(typeOfJob, jobType);
     }
 
-    public void clickOnFindJobsButton(){
+    public void clickOnFindJobsButton() {
         Reporter.log("Sending ENTER key : " + findJobs.toString());
         clickOnElement(findJobs, Keys.ENTER);
     }
